@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #333;
+}
+
+.pagina {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.topo {
+    background-color: #ffffff;
+    padding: 22px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.marca {
+    color: #356b57;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.topo h1 {
+    margin: 10px 0 5px;
+    font-size: 30px;
+}
+
+.topo p {
+    margin: 0;
+    color: #666;
+}
+
+.data-atual {
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+}
+
+.painel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.painel article {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.painel span {
+    display: block;
+    color: #666;
+    font-size: 13px;
+}
+
+.painel strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 26px;
+    color: #356b57;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.formulario-card,
+.lista-secao {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 9px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.ajuda {
+    color: #777;
+    font-size: 12px;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e8eeee;
+}
+
+.botao-principal {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    background: #356b57;
+    color: white;
+    font-weight: bold;
+}
+
+.botao-principal:hover {
+    background: #285441;
+}
+
+.mensagem {
+    min-height: 16px;
+    color: #356b57;
+    font-size: 13px;
+}
+
+.mensagem.erro {
+    color: #b3261e;
+}
+
+.lista-titulo {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+.filtro-label {
+    min-width: 110px;
+}
+
+.grade-receitas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.receita {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.receita h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.receita p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.etiqueta {
+    padding: 4px 7px;
+    background: #e7eee9;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.status-rascunho {
+    background: #fff0cc;
+}
+
+.status-testada {
+    background: #dcefe0;
+}
+
+.status-favorita {
+    background: #f8dddd;
+}
+
+.receita details {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.acoes button {
+    font-size: 11px;
+}
+
+.acoes .excluir {
+    color: #a32121;
+}
+
+.vazio {
+    color: #777;
+    font-size: 14px;
+    padding: 20px 5px;
+}
+
+footer {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    padding: 22px;
+}
+
+@media (max-width: 800px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .pagina {
+        width: 94%;
+    }
+
+    .painel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grade-receitas {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas do Grupo</title>
+  <link rel="stylesheet" href="css/receitas.css">
+</head>
+<body>
+  <div class="pagina">
+    <header class="topo">
+      <div><span class="marca">🍲 CADERNO DIGITAL</span><h1>Receitas do Grupo</h1><p>Um lugar para guardar, testar e favoritar receitas.</p></div>
+      <div class="data-atual" id="data-atual"></div>
+    </header>
+    <main>
+      <section class="painel">
+        <article><span>Total de receitas</span><strong id="total">0</strong></article>
+        <article><span>Rascunhos</span><strong id="rascunhos">0</strong></article>
+        <article><span>Testadas</span><strong id="testadas">0</strong></article>
+        <article><span>Favoritas</span><strong id="favoritas">0</strong></article>
+      </section>
+      <section class="conteudo">
+        <section class="formulario-card">
+          <div class="titulo-secao"><div><span class="eyebrow">NOVA RECEITA</span><h2>Adicionar receita</h2></div></div>
+          <form id="form-receita">
+            <label>Nome da receita<input name="nome" id="nome" minlength="3" maxlength="120" required placeholder="Ex.: Bolo de cenoura"></label>
+            <label>Descrição<textarea name="descricao" id="descricao" rows="2" placeholder="Conte um pouco sobre a receita"></textarea></label>
+            <div class="duas-colunas">
+              <label>Dificuldade<select name="dificuldade" id="dificuldade"><option value="facil">Fácil</option><option value="media">Média</option><option value="dificil">Difícil</option></select></label>
+              <label>Data da receita<input type="date" name="dataReceita" id="dataReceita" required></label>
+            </div>
+            <label>Ingredientes <span class="ajuda">Separe os ingredientes por vírgula.</span><textarea name="ingredientes" id="ingredientes" rows="3" required placeholder="2 ovos, 1 xícara de farinha, leite..."></textarea></label>
+            <label>Modo de preparo<textarea name="modoPreparo" id="modoPreparo" rows="4" required placeholder="Descreva o passo a passo"></textarea></label>
+            <button class="botao-principal" type="submit">＋ Salvar receita</button>
+            <p id="mensagem-form" class="mensagem"></p>
+          </form>
+        </section>
+        <section class="lista-secao">
+          <div class="titulo-secao lista-titulo"><div><span class="eyebrow">SEU ACERVO</span><h2>Receitas cadastradas</h2></div><label class="filtro-label">Filtrar<select id="filtro-status"><option value="todas">Todas</option><option value="rascunho">Rascunhos</option><option value="testada">Testadas</option><option value="favorita">Favoritas</option></select></label></div>
+          <div id="lista-receitas" class="grade-receitas"><p class="vazio">Conectando ao banco de dados...</p></div>
+        </section>
+      </section>
+    </main>
+    <footer>Projeto acadêmico · HTML, CSS, JavaScript, Node.js e MySQL</footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
